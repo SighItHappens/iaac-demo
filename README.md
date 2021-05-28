@@ -6,7 +6,7 @@ A simple Express application containerized using Docker and deployed into a Azur
 
 ### Express Application
 
-The (Express)[https://expressjs.com/] application is a bare-bones implementation and currently only supports a home page. Unit tests have been written using (Mocha)[https://mochajs.org/] and (Supertest)[https://www.npmjs.com/package/supertest].
+The [Express](https://expressjs.com/) application is a bare-bones implementation and currently only supports a home page. Unit tests have been written using [Mocha](https://mochajs.org/) and [Supertest](https://www.npmjs.com/package/supertest).
 
 A simple Dockerfile to containerize this application is present in the `express` directory. 
 
@@ -14,7 +14,7 @@ A simple Dockerfile to containerize this application is present in the `express`
 
 The express application described earlier is deployed into an Azure Kubernetes Service cluster. In order to provision the infrastucture, I have used Terraform to allow for automatic provisioning using Jenkins etc. or via the command line. 
 
-Given this is a simple demo, the terraform template uses a lot of default values and code inspired from the (official tutorial)[https://learn.hashicorp.com/tutorials/terraform/aks] for provisioning an AKS cluster, and the code can be found in the `terraform` directory.
+Given this is a simple demo, the terraform template uses a lot of default values and code inspired from the [official tutorial](https://learn.hashicorp.com/tutorials/terraform/aks) for provisioning an AKS cluster, and the code can be found in the `terraform` directory.
 
 An Ingress controller has been manually installed into the AKS cluster, but given that this would be a one-time process, this can be automated by directly running the necessary `kubectl` commands on the cluster.
 
@@ -40,7 +40,7 @@ The use of helm charts makes the scaling of the application inside the Kubernete
 ### Example - Increase number of Replicas of the Pod to 3
 
 ```bash
-helm upgrade <release-name> <path-to-helm-chart> --set replicaCount=3
+helm upgrade [release-name] [path-to-helm-chart] --set replicaCount=3
 ```
 
 ## Ingress Installation Command
